@@ -8,69 +8,112 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="89dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="31dp"
+        android:layout_width="121dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="177dp"
         android:text="Quantity"
         android:textAllCaps="true"
-        app:layout_constraintBottom_toTopOf="@+id/price_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/quantity_text_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quantity_text_view" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/quantity_text_view"
-        android:layout_width="53dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginBottom="7dp"
-        android:text="0"
+        android:layout_width="75dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="145dp"
+        android:text="2"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/price_text_view"
-        android:layout_width="49dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="24dp"
-        android:text="$0"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="4dp"
+        android:text="$10.00"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/quantity_text_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="93dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="92dp"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="247dp"
+        android:layout_marginEnd="17dp"
         android:text="price"
         android:textAllCaps="true"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_text_view" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="89dp"
-        android:layout_height="41dp"
-
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="365dp"
+        android:layout_width="381dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="381dp"
         android:onClick="submitOrder"
         android:text="Order"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout_marginTop="16dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="138dp"
+        android:layout_marginEnd="241dp"
+        android:onClick="increment"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="138dp"
+        android:layout_marginEnd="44dp"
+        android:onClick="decrement"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="button"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-13dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
